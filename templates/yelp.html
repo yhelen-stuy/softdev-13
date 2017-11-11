@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>galaxy!</title>
+    </head>
+
+    <body>
+        <p>Go <a href="/">home</a>.</p>
+        <h3>Here are some businesses with the search fields term=dirty bird and location=tribeca</h3>
+        <ol>
+        {% for bus in businesses %}
+        <li>
+            <p> <strong>{{ bus['name'] }}</strong> </p>
+            <p> {{ bus['location']['address1'] }} </p>
+            <p> {{ bus['location']['zip_code'] }} {{ bus['location']['city'] }}, {{ bus['location']['state'] }} </p>
+        </li>
+        {% endfor %}
+    </body>
+</html>
